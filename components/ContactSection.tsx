@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Github, Linkedin, ArrowUpRight, MessageSquare } from "lucide-react";
+import { Mail, ArrowUpRight, MessageSquare } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function ContactSection() {
@@ -16,25 +16,9 @@ export default function ContactSection() {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
       value: "lealorangel85@gmail.com",
-      href: "mailto:[lealorangel85@gmail.com]",
+      href: "mailto:lealorangel85@gmail.com",
       description: t.contact.cards.email,
       color: "#6366F1",
-    },
-    {
-      icon: <Github className="w-5 h-5" />,
-      label: "GitHub",
-      value: "https://github.com/orangelleal12",
-      href: "https://github.com/orangelleal12",
-      description: t.contact.cards.github,
-      color: "#22D3EE",
-    },
-    {
-      icon: <Linkedin className="w-5 h-5" />,
-      label: "LinkedIn",
-      value: "linkedin.com/in/orangelleal",
-      href: "https://linkedin.com/in/orangelleal",
-      description: t.contact.cards.linkedin,
-      color: "#A78BFA",
     },
   ];
 
@@ -82,7 +66,7 @@ export default function ContactSection() {
         </motion.div>
 
         {/* Contact cards */}
-        <div className="grid sm:grid-cols-3 gap-5 mb-10">
+        <div className="grid sm:grid-cols-1 max-w-sm mx-auto gap-5 mb-10">
           {contactLinks.map((link, i) => (
             <motion.a
               key={i}
